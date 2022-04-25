@@ -12,7 +12,9 @@ def maxSubArray(nums):
     result = nums[0]
 
     for i in range(1, len(nums)):
+
         working_max = max(nums[i], working_max + nums[i])
+        
         result = max(working_max, result)
 
     print(result)
