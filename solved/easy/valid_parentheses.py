@@ -14,23 +14,26 @@ def isValid(s):
     pairs = {')': '(', ']': '[', '}': '{'}
 
     for char in s:
+        print(stack)
         if char in pairs and stack:
             if stack.pop() != pairs[char]:
                 return False
         else:
             stack.append(char)
 
-    # print(stack == [])
+    print(stack == [])
     return stack == []
 
+
+
 s = "()"
-isValid(s)
+# isValid(s)
 # Output: true
 
 s = "()[]{}"
-isValid(s)
-# Output: true
-
+# isValid(s)
+# # Output: true
+#
 s = "(]"
-isValid(s)
-# Output: false
+# isValid(s)
+# # Output: false
