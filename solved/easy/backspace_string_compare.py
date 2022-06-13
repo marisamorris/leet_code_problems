@@ -6,26 +6,25 @@ Note that after backspacing an empty text, the text will continue empty.
 
 
 def backspaceCompare(s, t):
+    print(s, t)
     s_list = []
     t_list = []
 
     for char in s:
         if char != "#":
             s_list.append(char)
-        elif char == "#" and s_list:
+        elif char == "#":
             s_list.pop()
 
     for char in t:
         if char != "#":
             t_list.append(char)
-        elif char == "#" and t_list:
+        elif char == "#":
             t_list.pop()
 
-    print(True) if s_list == t_list else print(False)
-    return True if s_list == t_list else False
-
-    # print(s)
-    # print(s_list)
+    # print(s_list == t_list)
+    # return True if s_list == t_list else False
+    return s_list == t_list
 
 
 
@@ -39,13 +38,67 @@ backspaceCompare(s, t)
 
 s = "ab##"
 t = "c#d#"
-backspaceCompare(s, t)
+# backspaceCompare(s, t)
 # Output: true
 # Explanation: Both s and t become "".
 
 
 s = "a#c"
 t = "b"
-backspaceCompare(s, t)
+# backspaceCompare(s, t)
 # Output: false
 # Explanation: s becomes "c" while t becomes "b".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # s_list = []
+    # t_list = []
+    #
+    # for char in s:
+    #     if char != "#":
+    #         s_list.append(char)
+    #     elif char == "#" and s_list:
+    #         s_list.pop()
+    #
+    # for char in t:
+    #     if char != "#":
+    #         t_list.append(char)
+    #     elif char == "#" and t_list:
+    #         t_list.pop()
+    #
+    # print(True) if s_list == t_list else print(False)
+    # return True if s_list == t_list else False

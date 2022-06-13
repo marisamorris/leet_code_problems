@@ -5,22 +5,24 @@ If there is no common prefix, return an empty string "".
 """
 
 def longestCommonPrefix(strs):
-    idx = 0
+
+    index = 0
 
     for i in zip(*strs):
-        # print(i)
         if len(set(i)) == 1:
-            idx += 1
+            index += 1
         else:
             break
 
-    print(strs[0][:idx])
-    return strs[0][:idx]
+    print(strs[0][:index])
+
 
 
 strs = ["flower","flow","flight"]
 longestCommonPrefix(strs)
 # Output: "fl"
+
+print("--------------------------------")
 
 strs = ["dog","racecar","car"]
 longestCommonPrefix(strs)
