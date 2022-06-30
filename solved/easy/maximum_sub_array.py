@@ -5,20 +5,21 @@ A subarray is a contiguous part of an array.
 """
 
 def maxSubArray(nums):
-
     if len(nums) == 1: return nums[0]
 
     working_max = nums[0]
     result = nums[0]
 
     for i in range(1, len(nums)):
-
+        # find the max between the i index and working max
         working_max = max(nums[i], working_max + nums[i])
-        
+        # compare the working max to the result
         result = max(working_max, result)
 
     print(result)
     return result
+
+
 
 
 
